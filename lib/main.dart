@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:sympashop/screen/welcome/welcome_screen.dart';
 
-import 'page/main_home_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      title: "Quiz App",
       debugShowCheckedModeBanner: false,
-      home: MainHomePage(),
+      theme: ThemeData.dark(),
+      home: WelcomeScreen(),
     );
   }
 }
-
